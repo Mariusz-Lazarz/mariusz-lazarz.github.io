@@ -1,0 +1,570 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+$softgray: hsla(0, 0%, 100%, 0.712);
+$softred: rgb(255, 142, 142);
+$mainbg: radial-gradient(ellipse at right, #1B2735 0%, #090A0F 100%);
+$pseudo: 'Dancing Script', cursive;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+
+@mixin mq ($width) {
+    @media only screen and (max-width: $width){
+        @content
+    }
+}
+
+@mixin before {
+    color: $softgray;
+    font-family: $pseudo;
+    padding: 0px 10px;
+        font-size: 15px;
+        position: absolute;
+        top: -10px;
+        left: -25px;
+}
+
+@mixin after {
+    color: $softgray;
+    font-family: $pseudo;
+    font-size: 15px;
+    position: absolute;
+    bottom: -10px;
+    right: -25px;
+}
+
+
+// body 
+
+body{
+    background: $mainbg;
+    height: auto;
+}
+
+/* navigation bar  */
+
+header{
+    position: fixed;
+    nav{
+        padding: 100px 0px 200px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: $mainbg;
+        text-align: center;
+        width: 12vw;
+        height: 100vh;
+        @include mq(768px){
+            justify-content: space-evenly;
+        }
+        h1{
+            background-image: url(/img/MŁ-logos_white.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            text-indent: -9999px;
+            height: 170px;
+            @include mq(768px){
+               height: 65px;
+
+            }
+
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0px;
+            li{
+                list-style-type: none;
+                a{
+                    font-size: 20px;
+                    color: white;
+                    text-decoration: none;
+                    i{
+                        margin: 10px 0px 10px 0px;
+                        font-size: 40px;
+                        &:hover{
+                            color: #202020;
+                            background-color: white;
+                            border-radius: 5px;
+                            padding: 5px;
+
+                        }
+                        @include mq(768px){
+                            font-size: 30px;
+                        }
+                        
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.nav-ul{
+    gap: 20px;
+    @include mq(768px){
+        display: none;
+    }
+    li{
+        a{
+            &:hover{
+                color: #202020;
+                background-color: white;
+                border-radius: 5px;
+                padding: 5px;
+
+            }
+        }
+    }
+}
+
+.icon-ul{
+    display: none;
+    @include mq(768px){
+        display: block;
+    }
+}
+
+
+/* home section  style */ 
+
+.body,.section,.body-close,.section-close{
+    font-family: $pseudo;
+    position: absolute;
+    color: $softgray;
+    font-size: 30px;
+}
+
+.body{
+    top: 20px;
+    left: 40px;
+}
+
+.section{
+    top: 70px;
+    left: 60px;
+}
+
+.body-close{
+    bottom: 20px;
+    left: 40px;
+}
+
+.section-close{
+    bottom: 70px;
+    left: 60px;
+}
+
+
+// background js 
+
+
+#home{
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    background-color: transparent;
+    height: 100vh;
+    width: 88vw;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #js-particles{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -100;
+    }
+}
+
+
+// first text text 
+
+.ml2 {
+    color: white;
+    font-weight: 900;
+    font-size: 4em;
+    position: relative;
+    &::before{
+        content: '<h1>';
+        @include before;
+        
+    }
+    &::after{
+        content: '</h1>';
+       @include after;
+    }
+    @include mq(1200px){
+        font-size: 3.3em;
+    }
+    @include mq(1000px){
+        font-size: 2.5em;
+    }
+    @include mq(768px){
+        font-size: 1.6em;
+    }
+    @include mq(500px){
+        font-size: 1.1em;
+    }
+    .letter {
+        display: inline-block;
+        line-height: 1em;
+      }
+  }
+  
+// second text 
+.ml14 {
+    color: $softred;
+    font-weight: 200;
+    font-size: 2.2em;
+    position: relative;
+    &::before{
+        content: '<p>';
+        @include before;
+    }
+    &::after{
+        content: '</p>';
+        @include after();
+    }
+    @include mq(1000px){
+        font-size: 1.4em;
+    }
+    @include mq(768px){
+        font-size: 1em;
+    }
+    @include mq(500px){
+        font-size: .7em;
+    }
+    .text-wrapper {
+        position: relative;
+        display: inline-block;
+        padding-top: 0.1em;
+        padding-right: 0.05em;
+        padding-bottom: 0.15em;
+        .line {
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background-color: #fff;
+            transform-origin: 100% 100%;
+            bottom: 0;
+          }
+        .letter {
+            display: inline-block;
+            line-height: 1em;
+          }  
+      }
+  }
+
+// arrow anim 
+
+.arrow{
+    display: flex;
+    flex-direction:  row;
+    position: absolute;
+    bottom: 1%;
+    animation: bounce-4 infinite 1.5s ease-in;
+    i{
+        font-size: 40px;
+        color: $softred;
+
+
+
+    }
+}
+
+
+
+// work section 
+
+#work{
+    background: transparent;
+    padding: 30px;
+    height: auto;
+    width: 88vw;
+    margin-left: auto;
+    @include mq(450px){
+        padding: 5px;
+    }
+}
+
+
+
+
+.work{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    @include mq(1300px){
+        grid-template-columns: 1fr;
+    }
+}
+
+
+// work item 
+
+.work-item{
+    height: 400px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    img{
+        width: 100%;
+        min-height: 300px;
+        
+    }
+    .work-about{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        height: 100%;
+        h1{
+            margin-bottom: 10px;
+            font-size: 25px;
+        }
+        p{
+            font-size: 15px;
+        }
+        .tech{
+            margin: 30px 0px 20px 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            @include mq(768px){
+                margin: 10px;
+            }
+            p{
+                background-color: $softgray;
+                padding: 10px;
+                font-size: 15px;
+                border-radius: 5px;
+                @include mq(768px){
+                    font-size: 10px;
+                    padding: 5px;
+                }
+            }
+        }
+        .check{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            a{
+                text-decoration: none;
+                i{
+                    text-transform: uppercase;
+                    color: rgb(200, 0, 0);
+                    font-size: 20px;
+                    &:hover{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// h2 
+
+h2{
+    color: white;
+    width: fit-content;
+    font-size: 25px;
+    margin: 60px 30px;
+    position: relative;
+    text-align: center;
+    &:hover{
+        animation: rubberBand 1s ease;
+    }
+    &::before{
+        content: '<h2>';
+        @include before;
+        
+    }
+    &::after{
+        content: '</h2>';
+       @include after;
+    }
+}
+
+
+
+// about section 
+
+#about{
+    height: auto;
+    width: 88vw;
+    margin-left: auto;
+    padding: 30px;
+    .about-me{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        @include mq(768px){
+            text-align: center;
+            flex-direction: column;
+        }
+        .img{
+            background-image: url(/img/man.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            text-indent: -9999px;
+            height: 250px;
+            width: 250px;
+            position: relative;
+        }
+        .about-info{
+            width: 50%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            @include mq(768px){
+                width: 100%;
+            }
+            p{
+                font-size: 20px;
+                position: relative;
+                @include mq(768px){
+                    font-size: 15px;
+                }
+                &::before{
+                    content: '<p>';
+                    @include before;
+                }
+                &::after{
+                    content: '</p>';
+                    @include after;
+                }
+            }
+        }
+
+    }
+    .skill{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        p{  
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 500;
+            img{
+                margin-bottom: -20px;
+                height: 40px;
+                width: 40px;
+            }
+        }
+        
+    }
+}
+
+// contact 
+
+footer{
+    position: relative;
+    width: 88vw;
+    margin-left: auto;
+    padding: 30px;
+    height: auto;
+    p{
+        color: white;
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .contact-form{
+        margin-bottom: 100px;
+    }
+}
+
+
+
+
+// animations 
+
+
+
+@keyframes bounce-4 {
+    0%   { transform: scale(1,1)    translateY(0); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1) translateY(-20px); }
+    50%  { transform: scale(1,1)    translateY(0); }
+    100% { transform: scale(1,1)    translateY(0); }
+}
+
+
+
+@keyframes rubberBand {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+  
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+  
+    65% {
+      transform: scale3d(.95, 1.05, 1);
+    }
+  
+    75% {
+      transform: scale3d(1.05, .95, 1);
+    }
+  
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+
+  @keyframes wobble {
+    0% { transform: translateX(0%); } 
+    15% { transform: translateX(-25%) rotate(-5deg); } 
+    30% { transform: translateX(20%) rotate(3deg); } 
+    45% { transform: translateX(-15%) rotate(-3deg); } 
+    60% { transform: translateX(10%) rotate(2deg); }
+    75% { transform: translateX(-5%) rotate(-1deg); }
+    100% { transform: translateX(0%); } 
+ } 
+  

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Mariusz Łazarz" />
+    <meta name="description" content="Front-end Developer" />
+    <title>Mariusz Łazarz</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/animations.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/b160ac93e6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <h1>Logo</h1>
+        <ul class="nav-ul">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <ul class="icon-ul">
+          <li>
+            <a href="#home"><i class="fas fa-home"></i></a>
+          </li>
+          <li>
+            <a href="#work"><i class="fas fa-file-word"></i></a>
+          </li>
+          <li>
+            <a href="#about"><i class="fas fa-user"></i></a>
+          </li>
+          <li>
+            <a href="#contact"><i class="fas fa-phone-square-alt"></i></a>
+          </li>
+        </ul>
+        <ul class="social">
+          <li>
+            <a
+              href="https://github.com/Mariusz-Lazarz"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-github-square"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/mariusz-łazarz-447299217/"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="home">
+      <div id="js-particles"></div>
+      <h1 class="ml2">Hi! I'm Mariusz Web Developer</h1>
+      <h1 class="ml14">
+        <span class="text-wrapper">
+          <span class="letters"
+            >Passionate to learn and build beautiful things</span
+          >
+          <span class="line"></span>
+        </span>
+      </h1>
+      <div class="arrow">
+        <i class="fas fa-angle-double-down"></i>
+      </div>
+      <div class="body"></div>
+      <div class="section"></div>
+    </section>
+    <section id="work">
+      <h2 class="section-title">My Work</h2>
+      <div class="work animatedParent animateOnce">
+        <div class="work-item animated flipInX">
+          <img src="/img/one.jpg" alt="life tea" />
+          <div class="work-about">
+            <h1>Restaurant</h1>
+            <p>
+              My very first restaurant landing page. <br />
+              Containes responsive,modern design and some animations.
+            </p>
+            <div class="tech">
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>JavaScript</p>
+            </div>
+            <div class="check">
+              <a
+                href="https://github.com/Mariusz-Lazarz/lifetea"
+                target="_blank"
+                rel="noopener"
+                ><i class="fab fa-github"> Git </i></a
+              >
+              <a
+                href="https://lifetea.netlify.app"
+                target="_blank"
+                rel="noopener"
+                ><i class="fas fa-globe"> Live </i></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="work-item animated flipInX">
+          <img src="/img/two.jpg" alt="life tea" />
+          <div class="work-about">
+            <h1>CityFitness</h1>
+            <p>
+              Page with diet plans. Few page project with small store, offer
+              section and local datebase.
+            </p>
+            <p>This is my personal project reffering to one of my hobbies.</p>
+            <div class="tech">
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>JavaScript</p>
+              <p>Json</p>
+              <p>PHP</p>
+            </div>
+            <div class="check">
+              <a
+                href="https://github.com/Mariusz-Lazarz/CityFitness"
+                target="_blank"
+                rel="noopener"
+                ><i class="fab fa-github"> Git </i></a
+              >
+              <a
+                href="https://cityfitness.netlify.app"
+                target="_blank"
+                rel="noopener"
+                ><i class="fas fa-globe"> Live </i></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <h2 class="about-title">About Me</h2>
+      <div class="about-me">
+        <h1 class="img">xxxxxx</h1>
+        <div class="about-info">
+          <p>
+            Hello again! <br />I'm Mariusz currently living and studing in
+            Poland. I'm an visual person who loves to creating beautiful user
+            interfaces. Also what takes me into coding is logical thinking and
+            problem solving which I love.
+          </p>
+          <p>
+            Beside learning, building new coding things and studying, you find
+            me lifting heavy weights, running, playing video games, meeting new
+            people and...
+          </p>
+        </div>
+      </div>
+      <h2 class="skill-title">My Skillset</h2>
+      <div class="skill">
+        <p>
+          <img src="/img/html.png" alt="" /> <br />
+          HTML5
+        </p>
+        <p>
+          <img src="/img/css.png" alt="" /> <br />
+          CSS3
+        </p>
+        <p>
+          <img src="/img/js.png" alt="" /> <br />
+          JavaScript
+        </p>
+        <p>
+          <img src="/img/rwd.png" alt="" /> <br />
+          RWD
+        </p>
+        <p>
+          <img src="/img/scss.png" alt="" /> <br />
+          SCSS
+        </p>
+        <p>
+          <img src="/img/bootstrap.png" alt="" /> <br />
+          Bootstrap
+        </p>
+        <p>
+          <img src="/img/jquery.png" alt="" /> <br />
+          jQuery
+        </p>
+        <p>
+          <img src="/img/json.png" alt="" /> <br />
+          Json
+        </p>
+        <p>
+          <img src="/img/git.png" alt="" /> <br />
+          GitHub
+        </p>
+        <p>
+          <img src="/img/php.png" alt="" /> <br />
+          PHP
+        </p>
+      </div>
+    </section>
+    <footer id="contact">
+      <h2 class="contact-title">Keep in touch</h2>
+      <div class="contact-form d-flex flex-column align-items-center">
+        <form
+          class="form-floating col-12 col-md-10 col-lg-8 col-xl-6"
+          action="https://formsubmit.co/mariusz.lazarz97@gmail.com"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="_next"
+            value="http://mariusz-lazarz.github.io//thanks.html"
+          />
+          <input type="hidden" name="_captcha" value="false" />
+          <div class="form-floating mb-3">
+            <input
+              name="name"
+              type="text"
+              class="form-control"
+              id="floatingInput"
+              placeholder="Name"
+              required
+            />
+            <label for="floatingInput">Name</label>
+          </div>
+          <div class="form-floating">
+            <input
+              name="email"
+              type="email"
+              class="form-control"
+              id="floatingEmail"
+              placeholder="Email"
+              required
+            />
+            <label for="floatingEmail">Email</label>
+          </div>
+          <div class="form-floating mt-3 mb-3">
+            <textarea
+              name="message"
+              class="form-control"
+              placeholder="Leave a comment here"
+              id="floatingTextarea2"
+              style="height: 100px"
+              required
+            ></textarea>
+            <label for="floatingTextarea2">Your Message</label>
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Send</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="section-close"></div>
+      <div class="body-close"></div>
+      <p>© 2021 Mariusz Łazarz</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="/js/css3-animate-it.js"></script>
+    <script src="js/bg.js"></script>
+  </body>
+</html>
