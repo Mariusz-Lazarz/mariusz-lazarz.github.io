@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  animeTitle();
+  // animeTitle();
   animeSecond();
   addText();
   anchorSmooth();

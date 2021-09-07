@@ -188,6 +188,7 @@ header nav ul li a i:hover {
 }
 
 .ml2 {
+  text-align: start;
   color: white;
   font-weight: 900;
   font-size: 4em;
@@ -215,27 +216,15 @@ header nav ul li a i:hover {
   right: -25px;
 }
 
-@media only screen and (max-width: 1200px) {
-  .ml2 {
-    font-size: 3.3em;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .ml2 {
-    font-size: 2.5em;
-  }
-}
-
 @media only screen and (max-width: 768px) {
   .ml2 {
-    font-size: 1.6em;
+    font-size: 3em;
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 450px) {
   .ml2 {
-    font-size: 1.1em;
+    font-size: 2em;
   }
 }
 
@@ -272,21 +261,15 @@ header nav ul li a i:hover {
   right: -25px;
 }
 
-@media only screen and (max-width: 1000px) {
-  .ml14 {
-    font-size: 1.4em;
-  }
-}
-
 @media only screen and (max-width: 768px) {
   .ml14 {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 450px) {
   .ml14 {
-    font-size: .7em;
+    font-size: 1em;
   }
 }
 

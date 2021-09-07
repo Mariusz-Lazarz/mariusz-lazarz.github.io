@@ -192,6 +192,7 @@ header{
 // first text text 
 
 .ml2 {
+    text-align: start;
     color: white;
     font-weight: 900;
     font-size: 4em;
@@ -205,17 +206,11 @@ header{
         content: '</h1>';
        @include after;
     }
-    @include mq(1200px){
-        font-size: 3.3em;
-    }
-    @include mq(1000px){
-        font-size: 2.5em;
-    }
     @include mq(768px){
-        font-size: 1.6em;
+        font-size: 3em;
     }
-    @include mq(500px){
-        font-size: 1.1em;
+    @include mq(450px){
+        font-size: 2em;
     }
     .letter {
         display: inline-block;
@@ -237,14 +232,11 @@ header{
         content: '</p>';
         @include after();
     }
-    @include mq(1000px){
-        font-size: 1.4em;
-    }
     @include mq(768px){
-        font-size: 1em;
+        font-size: 1.5em;
     }
-    @include mq(500px){
-        font-size: .7em;
+    @include mq(450px){
+        font-size: 1em;
     }
     .text-wrapper {
         position: relative;
